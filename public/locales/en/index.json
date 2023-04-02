@@ -1,0 +1,38 @@
+{
+  "title":"Introduction of WuBlog",
+  "iam":"I'm",
+  "liuzhenyan":"Liu Zhenyan",
+  "typing":{
+    "static":", a",
+    "sparking1":" Front-end Coder",
+    "sparking2":"n AI-tech Follower",
+    "sparking3":"n Architect"
+  },
+  "introduction":{
+    "1":"Hello, I am Liu Zhenyan. Welcome to my personal homepage. I am a front-end/desktop developer who enjoys exploring technology and sharing knowledge, hating dynamic programming languages.",
+    "2":"I will submit blogs on this website and you can find projects I have made with my nice teammate or individually, feel free to comment every single work.",
+    "3":"I graduated from Zhejiang University with a bachelor's degree and currently studying at CAUP of Tongji University.",
+    "find-me-on":"Find me on",
+    "and":"and",
+    "mail-me-at":". Mail me at"
+  },
+  "discover":"YOU SHOULD KNOW ME",
+  "contact-me":"CONTACT ME",
+  "resume":{
+    "title":"Resume",
+    "header":"To See My Resume",
+    "p1":"My name is Liu Zhenyan, born in Hubei in 1999. I have graduated from Zhejiang University with a bachelor degree and I am studying at Tongji University as a graduate student. i am expected to graduate in 2024. I am studying front-end technology by myself and actively practice.",
+    "p2":"I have a strong learning ability, enthusiasm for front-end development technology, active thinking, and can quickly adapt to new environments, open up new fields, and learn new technologies.",
+    "to-see-resume":"Check Resume"
+  },
+  "skill":{
+    "title":"Skills",
+    "introduction":"As a developer with a primary focus on the frontend technology stack, I am proficient in using foundational languages such as HTML, JavaScript, and CSS. Additionally, I typically use TypeScript in conjunction with ESLint to reduce errors in my workflow. My preferred frontend framework is React and I have developed practical projects using Next.js. I am also well-versed in build tools such as Vite. For desktop applications, I am capable of using Electron for development. Furthermore, I am equally adept at working with backend runtimes and languages such as Node.js and Python. Drawing on my background in architectural studies, I am skilled in utilizing design tools such as Photoshop, Illustrator, and Figma, and can effectively communicate with designers."
+  },
+  "contact":{
+    "title":"Contact"
+  },
+  "project":{
+    "title":"Project"
+  }
+}

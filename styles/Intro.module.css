@@ -1,0 +1,9 @@
+.animation-button{
+  animation: button 1s ease infinite alternate;
+}
+
+@keyframes button {
+    to{
+        background-color: #0055b6
+    }
+}

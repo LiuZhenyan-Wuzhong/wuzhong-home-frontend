@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Montserrat;
+  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+*{
+  transition: background-color 300ms;
+}
+
+html{
+  scroll-behavior: smooth;
+
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+}
+
+.font-family-mont{
+  font-family:Montserrat;
+}
+
+body{
+  scroll-behavior: smooth;
+}
+
+.common-shadow{
+    box-shadow: 0px 0px 10px hsl(0, 0%, 80%);
+}
+
+.common-shadow-onhover:hover{
+    box-shadow: 0px 0px 10px hsl(0, 0%, 80%);
+}
+
+.primary-shadow-onhover:hover{
+    box-shadow: 0px 0px 7px #0070f379;
+}
+
+::-webkit-scrollbar {
+    display: flex;
+    width: 8px;
+    user-select: none;
+    touch-action: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #eeeeee;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #cccccc;
+    border-radius: 4px;
+}
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 标题1 */
+.markdown-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold; /* 加粗字体 */
+    margin: 2.5rem 0 2.5rem 0;
+  }
+  
+  /* 标题2 */
+  .markdown-content h2 {
+    font-size: 1.6rem;
+    font-weight: bolder; /* 加粗字体 */
+    margin: 2rem 0 2rem 0; /* 与上面的margin区分开来 */
+  }
+  
+  /* 标题3 */
+  .markdown-content h3 {
+    font-size: 1.25rem;
+    margin: 1rem 0 1rem 0;
+  }
+
+
+  .markdown-content p {
+    font: 400;
+    font-family: "Source Serif Pro", serif;
+    font-size: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+  
+  /*标签*/
+  .markdown-content .tag {
+    padding: .25em .5em;
+    background-color: #EFF2F9;
+    border-radius: 16px;
+    color: #2B2C34;
+    font-weight: bold;
+    margin: 0 .25rem .25rem 0;
+  }
+  
+  /* 链接 */
+  .markdown-content a{
+    color:#3182ce;
+    text-decoration:none;
+  }
+  .markdown-content a:hover{
+    color:#63b3ed;
+    text-decoration:underline;
+  }
+  
+  /* 引用 */
+  .markdown-content blockquote {
+    margin-left: 0;
+    padding-left: 1rem;
+    border-left: 4px solid #ddd;
+  }
+  
+  /* 列表和列表项 */
+  .markdown-content ul,
+  .markdown-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+  }
+  
+  /* 列表项 */
+  .markdown-content li {
+    margin-bottom: .5rem;
+  }
+  
+  /* 加粗 */
+  .markdown-content strong {
+    font-weight: 700;
+  }
+  
+  /* 斜体 */
+  .markdown-content em {
+    font-style: italic;
+  }
+  
+  /* 删除线 */
+  .markdown-content del {
+    text-decoration: line-through;
+  }
+  
+  /* 行内代码块 */
+  .markdown-content code {
+    padding: 0.2rem 0.4rem;
+    margin: 0 0.2rem;
+    font-size: 85%;
+    background-color: rgba(27,31,35,.05);
+    border-radius: 6px;
+    font-family: 'SFMono-Regular',Consolas,'Liberation Mono',Menlo,Courier,monospace;
+  }
+  
+  /* 代码块 */
+  .markdown-content pre{
+    background-color:rgba(27,31,35,.05);
+    padding:.25rem;
+    border-radius:8px;
+    overflow-x:auto;
+  }
+  .markdown-content code.language-shell{
+    color:#89e13c
+  }
+  
+  /* 图片 */
+  .markdown-content img {
+    display:block;
+    max-width:600px;
+    margin:10px auto;
+  }
+  

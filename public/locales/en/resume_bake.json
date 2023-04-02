@@ -1,0 +1,125 @@
+{
+  "contact":{
+    "name":"Liu Zhenyan",
+    "jobs":"Intention post: Intern of Front-end Development",
+    "site":"Shanghai, China"
+  },
+  "education":{
+    "title":"Education",
+    "item1":{
+      "university":"Tongji University",
+      "degree":"Master Degree in Architecture",
+      "score":"Score: 89.63/100"
+    },
+    "item2":{
+      "university":"Zhejiang University",
+      "degree":"Bachelor Degree in Architecture",
+      "score":"GPA: 4.12 Rank: 8/84"
+    }
+  },
+  "awards":{
+    "title":"Awards",
+    "item1":{
+      "nameList":{"name1":"ZJU Third Prize Scholarship"}
+    },
+    "item2":{
+      "nameList":{
+        "name1":"ZJU Second Prize Scholarship", 
+        "name2":"Zhejiang Provincial Government Scholarship"
+      }
+    },
+    "item3":{
+      "nameList":{
+        "name1":"ZJU Third Prize Scholarship", 
+        "name2":"Jianlang Second Prize Scholarship"
+      }
+    },
+    "item4":{
+      "nameList":{
+        "name1":"Architecture Hackathon(2022) 8th"
+      }
+    }
+  },
+  "projects":{
+    "title":"Projects",
+    "item1":{
+      "description":"Architecture Review Platform"
+    },
+    "item2":{
+      "description":"Desktop Translation Assistant"
+    },
+    "item3":{
+      "description":"Sketch Parametric Model Reconstruction Solution"
+    }
+  },
+  "profile":{
+    "title":"Profile",
+    "p1":"Liu Zhenyan, born in Hubei in 1999. Graduated from Zhejiang University with a bachelor's and master's degrees from Tongji University. Self-taught front-end development courses.", "p2":"Proficient in React with experience in Next.js, Vite, Electron, Node.js, and Python. Skilled in design tools like Photoshop, Illustrator, and Figma. Uses TypeScript with ESLint to minimize errors.", 
+    "p3":"Collaboration skills developed through team building tasks in undergrad studies, leadership skills developed as a student organization leader, and developed empathy through volunteering."
+  },
+  "experience":{
+    "title":"Experience",
+    "school":{
+      "item1":{
+        "time":"9.2017 - 6.2019",
+        "company":"Zhejiang University",
+        "work":"President of club 'Alumni Liaison Association'."
+      },
+      "item2":{
+        "time":"9.2016 - 6.2021",
+        "company":"Zhejiang University",
+        "work":"Awarded a four-star volunteer."
+      }
+    },
+    "company":{
+      "item1":{
+        "time":"7.2020 - 9.2020",
+        "company":"Jiu Mi Architecture Firm",
+        "work":"\"Green City China Headquarters\"Bid"
+      },
+      "item2":{
+        "time":"6.2021 - 9.2021",
+        "company":"Many Core",
+        "work":"Research Algorithm Intern"
+      }
+    }
+  },
+  "professional-skills":{
+    "title":"Professional Skills",
+    "item1":{
+      "skillType":"Front-end Basics",
+      "skillName":"html\\css\\js",
+      "proficiency":80
+    },
+    "item2":{
+      "skillType":"Framework",
+      "skillName":"react\\nextjs",
+      "proficiency":70
+    },
+    "item3":{
+      "skillType":"Code Rule",
+      "skillName":"ts\\eslint",
+      "proficiency":75
+    },
+    "item4":{
+      "skillType":"Build Tools",
+      "skillName":"vite",
+      "proficiency":60
+    },
+    "item5":{
+      "skillType":"Desktop Dev",
+      "skillName":"electron",
+      "proficiency":65
+    },
+    "item6":{
+      "skillType":"Back-end Tech",
+      "skillName":"nodejs\\python",
+      "proficiency":70
+    },
+    "item7":{
+      "skillType":"Design Basics",
+      "skillName":"ps\\ai\\figma",
+      "proficiency":80
+    }
+  }
+}

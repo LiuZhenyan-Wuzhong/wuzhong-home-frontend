@@ -1,0 +1,5 @@
+/* 列表样式 */
+ol,
+ul {
+  list-style: none;
+}
