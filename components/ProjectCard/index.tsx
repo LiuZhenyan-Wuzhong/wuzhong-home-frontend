@@ -15,7 +15,12 @@ export default function ProjectCard({ className, project }: ProjectCardProps): J
         'flex flex-col items-center relative',
         className
       )}>
-      <Image src={project.imgUrls[0]} fill alt={project.name} className="object-cover" />
+      <Image
+        src={project.imgUrls[0]}
+        fill
+        alt={project.name}
+        className="object-cover border rounded-3xl dark:border-gray-600"
+      />
       <div
         className={clsx(
           'absolute p-4 z-20 w-full h-full',
