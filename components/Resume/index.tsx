@@ -212,7 +212,7 @@ function Resume(
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
                 <PhoneLogo />
               </div>
-              <div>+86 188xxxx8277</div>
+              <div>+86 {process.env.NEXT_PUBLIC_TEL || '188xxxx8277'}</div>
             </div>
 
             <a
@@ -239,13 +239,13 @@ function Resume(
 
             <a
               className="flex items-center gap-4"
-              href="https://github.com/LiuZhenyan-Wuzhong"
+              href="https://wuzhong-home-frontend.vercel.app/"
               target="_blank"
               rel="noreferrer">
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
                 <WebLogo />
               </div>
-              <div>www.wuzhong.com</div>
+              <div>LiuZhenyan-Home</div>
             </a>
 
             <div className="flex items-center gap-4">

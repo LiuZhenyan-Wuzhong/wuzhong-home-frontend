@@ -6,11 +6,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Resume from '../components/Resume';
 import { useRouter } from 'next/router';
 import { Locale } from '../components/Navbar';
-import htmlToPdfmake from 'html-to-pdfmake';
-import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
-// import ResumeController from '../components/ResumeController';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dist/shared/lib/dynamic';
 
 const ResumeController = dynamic(() => import('../components/ResumeController'), { ssr: false });
