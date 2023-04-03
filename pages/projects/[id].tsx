@@ -72,18 +72,28 @@ export default function DetailProjectPage({}: DetailProjectPageProps) {
                   {project.introduction}
                 </div>
 
-                <a
-                  href={project.link?.value}
-                  className="font-normal text-gray-600 dark:text-gray-300">
-                  {project.link?.desc}
-                </a>
+                <div className="flex gap-2">
+                  link:
+                  <a
+                    href={project.link?.value}
+                    className="font-normal text-gray-600 dark:text-gray-300 underline">
+                    {project.link?.desc}
+                  </a>
+                </div>
               </div>
 
               <div className="w-2/3 flex flex-col gap-8 flex-wrap flex-grow-0">
                 {project.videoUrls && project.videoUrls[0] && (
                   <div className="w-full h-96 relative overflow-hidden rounded-2xl border shrink-0 dark:border-gray-600">
                     <video className="w-full h-full" controls>
-                      <source src={project.videoUrls[0]} type="video/mp4" />
+                      <source
+                        src={project.videoUrls[0]}
+                        type={`video/${
+                          project.videoUrls[0].split('.')[
+                            project.videoUrls[0].split('.').length - 1
+                          ]
+                        }`}
+                      />
                     </video>
                   </div>
                 )}
