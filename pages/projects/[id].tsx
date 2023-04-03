@@ -83,20 +83,19 @@ export default function DetailProjectPage({}: DetailProjectPageProps) {
               </div>
 
               <div className="w-2/3 flex flex-col gap-8 flex-wrap flex-grow-0">
-                {project.videoUrls && project.videoUrls[0] && (
-                  <div className="w-full h-96 relative overflow-hidden rounded-2xl border shrink-0 dark:border-gray-600">
-                    <video className="w-full h-full" controls>
-                      <source
-                        src={project.videoUrls[0]}
-                        type={`video/${
-                          project.videoUrls[0].split('.')[
-                            project.videoUrls[0].split('.').length - 1
-                          ]
-                        }`}
-                      />
-                    </video>
-                  </div>
-                )}
+                {project.videoUrls &&
+                  project.videoUrls.map((videoUrl, idx) => (
+                    <div
+                      key={idx}
+                      className="w-full h-96 relative overflow-hidden rounded-2xl border shrink-0 dark:border-gray-600">
+                      <video className="w-full h-full" controls>
+                        <source
+                          src={videoUrl}
+                          type={`video/${videoUrl.split('.')[videoUrl.split('.').length - 1]}`}
+                        />
+                      </video>
+                    </div>
+                  ))}
 
                 {project.gifUrls[0] && (
                   <div className="w-full h-96 relative overflow-hidden rounded-2xl border shrink-0 dark:border-gray-600">
