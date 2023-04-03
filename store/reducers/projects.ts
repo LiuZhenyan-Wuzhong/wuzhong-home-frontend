@@ -89,7 +89,7 @@ export const initialProjectState: ProjectState = {
         '/projects/sketch2param/case_03.png'
       ],
       gifUrls: [],
-      videoUrls: ['/projects/sketch2param/video_01.mp4'],
+      videoUrls: ['/projects/sketch2param/video_01.mp4', '/projects/sketch2param/video_02.mp4'],
       stackList: ['Pytorch', 'HTML', 'CSS', 'JavaScript', 'Three.js'],
       introduction:
         '使用HTML \\ CSS \\ JavaScript实现的"手绘草图参数化建模"项目，重建逻辑使用基于Pytorch的深度学习模型(Res-Net)，几何显示使用Three.js库。',
