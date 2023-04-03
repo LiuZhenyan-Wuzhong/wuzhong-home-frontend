@@ -239,13 +239,13 @@ function Resume(
 
             <a
               className="flex items-center gap-4"
-              href="https://service-8w4ctcv6-1317242412.hk.apigw.tencentcs.com/"
+              href="https://www.wuzhong.cloud"
               target="_blank"
               rel="noreferrer">
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
                 <WebLogo />
               </div>
-              <div>LiuZhenyan-Home</div>
+              <div>www.wuzhong.cloud</div>
             </a>
 
             <div className="flex items-center gap-4">
