@@ -39,7 +39,6 @@ export const initialProjectState: ProjectState = {
         '/projects/autoreview/case_05.png'
       ],
       gifUrls: [],
-      videoUrls: ['/projects/autoreview/video_01.mp4'],
       stackList: [
         'Nextjs',
         'Radix-UI',
