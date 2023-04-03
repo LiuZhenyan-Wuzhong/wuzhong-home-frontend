@@ -239,7 +239,7 @@ function Resume(
 
             <a
               className="flex items-center gap-4"
-              href="https://wuzhong-home-frontend.vercel.app/"
+              href="https://service-8w4ctcv6-1317242412.hk.apigw.tencentcs.com/"
               target="_blank"
               rel="noreferrer">
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
@@ -319,11 +319,11 @@ function Resume(
                 company={t('experience.company.item2.company')}
                 work={t('experience.company.item2.work')}
               />
-              <ExperienceItem
+              {/* <ExperienceItem
                 time="1.2022 - 3.2022"
                 company={'同济大学'}
                 work={'极智未来·建筑黑客马拉松 前八'}
-              />
+              /> */}
             </div>
           </div>
 
