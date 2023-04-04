@@ -95,7 +95,7 @@ export const initialProjectState: ProjectState = {
         '使用HTML \\ CSS \\ JavaScript实现的"手绘草图参数化建模"项目，重建逻辑使用基于Pytorch的深度学习模型(Res-Net)，几何显示使用Three.js库。',
       responsibility: '由本人独立完成项目编码工作。',
       link: {
-        value: 'http://106.14.248.47:8000/predict/sketch2parameter/index3/',
+        value: 'http://106.14.248.47/predict/sketch2parameter/index3/',
         desc: 'sketch2parameter'
       }
     }
