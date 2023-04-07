@@ -442,7 +442,7 @@ function Resume(
             <SkillItem
               skillType={t('professional-skills.item6.skillType')}
               skillName={'nodejs\\python'}
-              description={'熟悉Nodejs，Python等后端技术，了解数据库以及后端框架的使用。'}
+              description={'了解Nodejs\\Python(Django)等后端技术，了解数据库的使用。'}
             />
             <SkillItem
               skillType={t('professional-skills.item7.skillType')}

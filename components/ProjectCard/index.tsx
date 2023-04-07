@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { AllHTMLAttributes } from 'react';
 import Image from 'next/image';
 import { Project } from '../../store/reducers/projects';
+import Link from 'next/link';
+import Router from 'next/router';
 
 interface ProjectCardProps extends AllHTMLAttributes<HTMLDivElement> {
   project: Project;
@@ -14,13 +16,15 @@ export default function ProjectCard({ className, project }: ProjectCardProps): J
         'w-64 h-52 flex-grow overflow-hidden rounded-3xl group',
         'flex flex-col items-center relative',
         className
-      )}>
+      )}
+      onClick={() => Router.push('/projects/' + project._id)}>
       <Image
         src={project.imgUrls[0]}
         fill
         alt={project.name}
         className="object-cover border rounded-3xl dark:border-gray-600"
       />
+
       <div
         className={clsx(
           'absolute p-4 z-20 w-full h-full',
@@ -32,6 +36,7 @@ export default function ProjectCard({ className, project }: ProjectCardProps): J
           background: 'linear-gradient(90.21deg, #007fff -5.91%, #3acbde 111.58%)',
           opacity: 0.75
         }}></div>
+
       <div
         className={clsx(
           'absolute p-4 z-20 w-full h-full flex flex-col items-center justify-center',

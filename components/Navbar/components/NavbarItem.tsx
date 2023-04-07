@@ -22,7 +22,7 @@ export default function NavbarItem({ className, url, name }: NavbarItemProps) {
   return (
     <button
       className={clsx(
-        'hidden lg:block font-medium text-gray-400 cursor-pointer rounded-lg p-4 px-3',
+        'font-medium text-gray-400 cursor-pointer rounded-lg p-4 px-3',
         'transition duration-150 ease-in font-semibold',
         'dark:text-gray-200',
         mainPath === url
