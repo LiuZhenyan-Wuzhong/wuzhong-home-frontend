@@ -54,8 +54,8 @@
   },
   "profile":{
     "title":"Profile",
-    "p1":"Liu Zhenyan, born in Hubei in 1999. Graduated from Zhejiang University with a bachelor's and master's degrees from Tongji University. Self-taught front-end development courses.", "p2":"Proficient in React with experience in Next.js, Vite, Electron, Node.js, and Python. Skilled in design tools like Photoshop, Illustrator, and Figma. Uses TypeScript with ESLint to minimize errors.", 
-    "p3":"Collaboration skills developed through team building tasks in undergrad studies, leadership skills developed as a student organization leader, and developed empathy through volunteering."
+    "p1":"Liu Zhenyan was born in Hubei in 1999. He graduated from Zhejiang University with a bachelor's degree and is currently pursuing a master's degree at Tongji University (expected to graduate in 2024). He has self-taught front-end courses and participated in the development of multiple projects, with experience in full-stack development. He has strong learning ability, is passionate about front-end development technology, and loves to learn new technologies.", 
+    "p2":"During his undergraduate period, he served as the leader of a student club and had strong sense of responsibility; he participated in volunteer activities several times and was awarded a four-star volunteer for his strong empathy; he had completed several team building design tasks with excellent communication and teamwork skills."
   },
   "experience":{
     "title":"Experience",

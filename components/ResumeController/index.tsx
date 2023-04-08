@@ -28,6 +28,8 @@ export default function ResumeController({
 
       window.onafterprint = () => {
         document.body.innerHTML = originalContents;
+
+        location.reload();
       };
 
       window.print();
