@@ -331,7 +331,7 @@ function HanContent(
               skillType={'前端工程化'}
               skillName={'Vite'}
               description={
-                '了解JS模块化规范.熟悉webpack构建工具,了解loader,编写过plugin。了解并使用过vite。'
+                '了解JS模块化规范.熟悉webpack构建工具,了解loader,plugin概念。了解并使用过vite。'
               }
             />
             <SkillItem
