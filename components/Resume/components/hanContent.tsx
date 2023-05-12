@@ -152,16 +152,16 @@ interface SkillItemProps extends AllHTMLAttributes<HTMLDivElement> {
 
 function SkillItem({ children, skillType, skillName, description }: SkillItemProps): JSX.Element {
   return (
-    <div className="flex gap-4 items-start">
-      <div className="flex flex-col gap-0 flex-shrink-0">
+    <div className="items-start">
+      {/* <div className="flex flex-col gap-0 flex-shrink-0">
         <div className="text-lg font-bold text-gray-600 dark:text-gray-200">{skillType}</div>
-        {/* <div className="text-xs font-normal text-gray-400 dark:text-gray-500">{skillName}</div> */}
       </div>
       <div className="flex gap-8 items-center text-lg font-normal">
-        {/* <Progress progress={proficiency} />
-        {proficiency} */}
         {description}
-      </div>
+      </div> */}
+
+      <span className="text-lg font-bold text-gray-600 dark:text-gray-200 mr-4">{skillType}</span>
+      <span className="text-lg font-normal">{description}</span>
     </div>
   );
 }
@@ -276,7 +276,7 @@ function HanContent(
               university={'同济大学'}
               degree={'建筑学硕士'}
               course={'修读：人工智能导论 \\ 数字建筑学'}
-              score={'GPA: 4.7  成绩: 89.63/100' || undefined}
+              score={'GPA: 4.71  排名: 8/146' || undefined}
             />
 
             <EducationItem
@@ -311,38 +311,46 @@ function HanContent(
             <SkillItem
               skillType={'前端基础'}
               skillName={'HTML\\CSS\\JavaScript'}
-              description={'能够熟练使用 HTML \\ CSS \\ JavaScript等基础语言'}
+              description={
+                '熟悉HTML5元素以及API;熟悉CSS样式,能使用flex\\grid布局方式;熟悉JS,ES6语法,习惯使用TS。了解浏览器事件循环机制。'
+              }
             />
             <SkillItem
               skillType={'前端框架'}
               skillName={'React\\Nextjs'}
-              description={'擅长的框架为React，了解NextJS并开发过实际项目'}
+              description={
+                '熟悉React框架,熟悉函数组件了解过源码;了解Redux状态管理库;了解NextJS并开发过实际项目。'
+              }
             />
-            <SkillItem
+            {/* <SkillItem
               skillType={'代码规范'}
               skillName={'TypeScript\\eslint'}
               description={'熟悉TypeScript，习惯配合eslint开发以减少错误'}
-            />
+            /> */}
             <SkillItem
-              skillType={'构建工具'}
+              skillType={'前端工程化'}
               skillName={'Vite'}
-              description={'熟悉Vite等构建工具'}
+              description={
+                '了解JS模块化规范.熟悉webpack构建工具,了解loader,编写过plugin。了解并使用过vite。'
+              }
             />
             <SkillItem
               skillType={'后端技术'}
               skillName={'nodejs\\python'}
-              description={'了解Nodejs\\Python等后端技术，了解数据库使用'}
+              description={
+                '使用过express，Django搭建后端服务器,了解HTTP请求, REST风格API设计,用户鉴权。'
+              }
             />
-            <SkillItem
+            {/* <SkillItem
               skillType={'设计基础'}
               skillName={'PS\\AI\\figma'}
               description={'能使用PS\\AI\\figma等设计工具，与设计师高效对接'}
-            />
-            <SkillItem
+            /> */}
+            {/* <SkillItem
               skillType={'桌面开发'}
               skillName={'Electron'}
               description={'能够使用Electron进行桌面端开发'}
-            />
+            /> */}
           </div>
         </div>
 
@@ -370,7 +378,7 @@ function HanContent(
               name={'AutoReview'}
               // description={t('projects.item1.description')}
               stackList={[
-                'Nextjs',
+                'React',
                 'Radix-UI',
                 'tailwindcss',
                 'Three.js',
@@ -380,7 +388,7 @@ function HanContent(
                 'MySQL'
               ]}
               introduction={
-                '本项目是一个Web建筑图纸自动建模与规范审核工具。需实现图纸上传、用户项目管理、模型三维显示、自动审核规范等功能。\n我负责使用NextJS框架配合Radix-UI组件库和tailwindcss进行页面布局，使用Three.js实现模型显示，使用Django和MySQL搭建RESTful API服务器提供用户和项目管理功能，通过Python实现图纸的三维建模。'
+                '本项目是一个Web建筑图纸自动建模与规范审核工具。需实现图纸上传、用户项目管理、模型三维显示、自动审核规范等功能。\n我负责使用React框架配合Radix-UI组件库和tailwindcss进行页面布局，使用Three.js实现模型显示，使用Django和MySQL搭建RESTful API服务器提供用户和项目管理功能，通过Python实现图纸的三维建模。'
               }
             />
 
@@ -390,7 +398,7 @@ function HanContent(
               // description={t('projects.item2.description')}
               stackList={['Electron', 'Vite', 'React', 'ChatGPT-API', 'TypeScript']}
               introduction={
-                '本项目是一款桌面划词翻译软件。需实现自动翻译用户所选字段的功能。\n由我个人进行设计与开发，使用了Electron构建桌面软件并配合Vite实现高效打包，使用了React进行界面布局以及实现交互，调用ChatGPT API实现翻译逻辑。最终项目实现了预期功能。'
+                '本项目是一款桌面划词翻译软件。需实现自动翻译用户所选字段的功能。\n由我个人进行设计与开发，使用了Electron构建桌面软件实现了舒适、快捷的翻译使用体验，使用了React进行界面布局以及实现交互，调用ChatGPT API实现翻译逻辑。最终项目实现了预期功能。'
               }
             />
 
@@ -399,12 +407,8 @@ function HanContent(
               name={'Sketch2Param'}
               // description={t('projects.item3.description')!}
               stackList={['Pytorch', 'HTML', 'CSS', 'JavaScript', 'Three.js']}
-              /**
-               *
-               *
-               */
               introduction={
-                '本项目是一个Web端手绘草图参数化建模工具。需实现基于用户上传的草图预测参数化模型参数的功能。\n由本人主导完成项目编码工作，使用HTML\\CSS\\JavaScript实现了用户界面，通过Pytorch搭建并训练了深度学习模型(Res-Net)以实现对参数化模型的预测，通过Three.js实现了参数化模型的显示并提供了用户调参接口。该项目入围了"极智未来·建筑黑客马拉松"竞赛，最终进入前八。'
+                '本项目是一个Web端手绘草图参数化建模工具。需实现基于用户上传的草图预测参数化模型参数的功能。\n由本人主导完成项目编码工作，使用HTML\\CSS\\JS实现了用户界面，通过Pytorch搭建并训练了深度学习模型(Res-Net)以实现对参数化模型的预测，通过Three.js实现了参数化模型的显示并提供了用户调参接口。该项目入围了"极智未来·建筑黑客马拉松"竞赛，最终进入前八。'
               }
             />
           </div>
@@ -415,9 +419,9 @@ function HanContent(
             <div className={clsx('flex flex-col flex-1 flex-grow gap-3')}>
               <ExperienceItem
                 time="6.2021 - 9.2021"
-                company={'群核科技'}
+                company={'群核科技(酷家乐)'}
                 work={
-                  '前沿技术研究院是群核科技负责研究前沿算法和技术的部门。我担任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。\n在实习中，我兼顾了论文阅读、成果和算法实操，对复现的深度学习模型进行试验。最终完成了两篇文章的算法复现，帮助部门总结了模型训练经验。此过程中我也锻炼了自身的深度学习技术以及git\\linux等工作技能。'
+                  '前沿技术研究院是群核科技负责研究前沿算法和技术的部门。我担任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。\n在实习中，我兼顾了论文阅读和算法实操，以及复现模型的试验。最终完成了两篇文章的算法复现，帮助部门总结了模型训练经验。此过程中我学习了使用pytorch进行深度学习训练，以及git\\linux等工作技能。'
                 }
               />
               <ExperienceItem
