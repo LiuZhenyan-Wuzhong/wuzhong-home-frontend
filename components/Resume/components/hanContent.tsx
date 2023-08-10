@@ -322,7 +322,7 @@ function HanContent(
             />
             <SkillItem
               skillType={'前端框架'}
-              skillName={'React\\Nextjs'}
+              skillName={'React\\Umi'}
               description={
                 '熟悉React框架,习惯使用函数组件;了解Redux,Hox状态管理库;使用Umi开发过实际项目。'
               }
