@@ -98,12 +98,17 @@ function ProjectItem({
       <div className="flex gap-4">
         <div className="text-lg font-bold text-primary dark:text-primaryHover">{time}</div>
         <div className="text-xl font-bold text-gray-600 dark:text-gray-200">{name}</div>
-        {/* <div className="text-xl font-normal text-gray-400 dark:text-gray-500">{description}</div> */}
       </div>
-      <div className="flex flex-wrap text-gray-400 dark:text-gray-500 text-[16px] font-normal leading-none">
+      <div className="flex flex-wrap items-center text-gray-400 dark:text-gray-500 text-[16px] font-normal leading-none">
         {stackList.join(' \\ ')}
+        {description && (
+          <div className="ml-4 text-sm font-normal text-gray-400 dark:text-gray-500">
+            {description}
+          </div>
+        )}
       </div>
-      <div className="flex flex-col mt-1">
+
+      <div className="flex flex-col mt-0">
         {introduction.split('\n').map((sub, idx) => (
           <div key={idx} className="mt-2 text-xl font-normal text-gray-600 dark:text-gray-200">
             {sub}
@@ -319,7 +324,7 @@ function HanContent(
               skillType={'前端框架'}
               skillName={'React\\Nextjs'}
               description={
-                '熟悉React框架,熟悉函数组件了解过源码;了解Redux状态管理库;了解NextJS并开发过实际项目。'
+                '熟悉React框架,习惯使用函数组件;了解Redux,Hox状态管理库;使用Umi开发过实际项目。'
               }
             />
             {/* <SkillItem
@@ -331,7 +336,7 @@ function HanContent(
               skillType={'前端工程化'}
               skillName={'Vite'}
               description={
-                '了解JS模块化规范.熟悉webpack构建工具,了解loader, plugin概念。了解并使用过vite。'
+                '了解JS模块化规范.了解webpack构建工具,了解loader, plugin概念。了解并使用过vite。'
               }
             />
             <SkillItem
@@ -360,7 +365,7 @@ function HanContent(
 
             <p className="text-xl font-normal text-gray-600 dark:text-gray-200">
               {
-                '刘真言，1999年生于湖北。本科毕业于浙江大学(建筑学)，研究生就读于同济大学(建筑学,2024年春毕业)。学习能力强，自学前端，参与多个项目的开发，有全栈开发经历。'
+                '刘真言，1999年生于湖北。本科毕业于浙江大学(建筑学)，研究生就读于同济大学(建筑学,2024年春毕业)。学习能力强，参与多个项目的开发，在两家公司担任过前端开发实习生工作。'
               }
             </p>
             {/* <p className="text-xl font-normal text-gray-600 dark:text-gray-200">
@@ -370,8 +375,18 @@ function HanContent(
             </p> */}
           </div>
 
-          <div id="project" className={clsx('flex flex-col gap-5')}>
+          <div id="project" className={clsx('flex flex-col gap-3')}>
             <Title>{'参与项目'}</Title>
+
+            <ProjectItem
+              time={'3.2023 - *8.2023'}
+              name={'SuitNTie(适途咨询)'}
+              description={'(下列功能已全部实现，简历投递时在进行最后优化。)'}
+              stackList={['Umi', 'AntD', 'tailwindcss', 'TypeScript']}
+              introduction={
+                '本项目是面向国际高中的留学咨询平台。提供院校详实信息展示；职业兴趣测试；申请进度管理等功能。\n我负责该项目的前端实现，采用了Umi+AntD来搭建前端项目。项目中实现了基于GPT-4和院校数据库的机器人对话功能；基于AntD表格的分页筛选展示功能。采用umi内置的Hox来进行状态管理。'
+              }
+            />
 
             <ProjectItem
               time={'11.2022 - *4.2023'}
@@ -398,11 +413,11 @@ function HanContent(
               // description={t('projects.item2.description')}
               stackList={['Electron', 'Vite', 'React', 'ChatGPT-API', 'TypeScript']}
               introduction={
-                '本项目是一款桌面划词翻译软件。需实现自动翻译用户所选字段的功能。\n由我个人进行设计与开发，使用了Electron构建桌面软件实现了舒适、快捷的翻译使用体验，使用了React进行界面布局以及实现交互，调用ChatGPT API实现翻译逻辑。最终项目实现了预期功能。'
+                '本项目是一款桌面划词翻译软件。需实现自动翻译用户所选字段的功能。\n由我个人进行设计与开发，使用Electron构建桌面软件实现快捷的翻译使用体验，使用React构建UI，调用ChatGPT API实现翻译逻辑。'
               }
             />
 
-            <ProjectItem
+            {/* <ProjectItem
               time={'2.2022 - 3.2022'}
               name={'Sketch2Param'}
               // description={t('projects.item3.description')!}
@@ -410,7 +425,7 @@ function HanContent(
               introduction={
                 '本项目是一个Web端手绘草图参数化建模工具。需实现基于用户上传的草图预测参数化模型参数的功能。\n由本人主导完成项目编码工作，使用HTML\\CSS\\JS实现了用户界面，通过Pytorch搭建并训练了深度学习模型(Res-Net)以实现对参数化模型的预测，通过Three.js实现了参数化模型的显示并提供了用户调参接口。该项目入围了"极智未来·建筑黑客马拉松"竞赛，最终进入前八。'
               }
-            />
+            /> */}
           </div>
 
           <div id="experiance" className={clsx('flex flex-col gap-5')}>
@@ -421,14 +436,28 @@ function HanContent(
                 time="6.2021 - 9.2021"
                 company={'群核科技(酷家乐)'}
                 work={
-                  '前沿技术研究院是群核科技负责研究前沿算法和技术的部门。我担任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。\n在实习中，我兼顾了论文阅读和算法实操，以及复现模型的试验。最终完成了两篇文章的算法复现，帮助部门总结了模型训练经验。此过程中我学习了使用pytorch进行深度学习训练，以及git\\linux等工作技能。'
+                  '担任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。完成了两篇文章的算法复现，帮助部门总结了模型训练经验。此过程中我学习了使用pytorch进行深度学习训练，以及git\\linux等工作技能。'
                 }
               />
               <ExperienceItem
+                time="3.2023 - 7.2023"
+                company={'上海西领留学咨询'}
+                work={
+                  '担任“SuitNTie(适途咨询)”项目中担任前端开发实习生岗位，独立负责了该项目的全部前端开发任务。与海外后端同事在线合作，出色地实现了该项目的前端页面和功能。'
+                }
+              />
+              <ExperienceItem
+                time="7.2023 - 8.2023"
+                company={'平安科技'}
+                work={
+                  '担任"视觉算法团队"前端实习生。为PingAnGPT模型开发了流式响应的AI聊天窗口。开发了大模型评测系统的web页面以辅助算法工程师研发。'
+                }
+              />
+              {/* <ExperienceItem
                 time="9.2017 - 6.2019"
                 company={'浙江大学'}
                 work={'担任四星社团"校友联络协会"会长，有较强责任心与团队协作能力。'}
-              />
+              /> */}
               {/* <ExperienceItem
                 time="9.2016 - 6.2021"
                 company={'浙江大学'}

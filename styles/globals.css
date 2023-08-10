@@ -2,9 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: Montserrat;
-  src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+/* 添加Noto Sans SC字体 */
+@layer base{
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans SC';
+    src: url('/assets/fonts/Noto_Sans_SC/NotoSansSC-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
 }
 
 *{
@@ -14,11 +49,11 @@
 html{
   scroll-behavior: smooth;
 
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: Noto Sans SC, Inter;
 }
 
 .font-family-mont{
-  font-family:Montserrat;
+  font-family:Noto Sans SC;
 }
 
 body{
