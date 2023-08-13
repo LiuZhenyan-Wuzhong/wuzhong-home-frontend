@@ -95,9 +95,14 @@ function ProjectItem({
 }: ProjectItemProps): JSX.Element {
   return (
     <div className="flex flex-col">
-      <div className="flex gap-4">
-        <div className="text-lg font-bold text-primary dark:text-primaryHover">{time}</div>
-        <div className="text-xl font-bold text-gray-600 dark:text-gray-200">{name}</div>
+      <div className="flex space-x-4 font-bold">
+        <div className="text-lg text-primary dark:text-primaryHover">{time}</div>
+        <div className="flex space-x-1">
+          <div className="text-xl text-gray-600 dark:text-gray-200">{name.split(' ')[0]}</div>
+          <div className="text-xl font-semibold text-gray-600 dark:text-gray-400">
+            ({name.split(' ')[1] ? name.split(' ')[1] : null})
+          </div>
+        </div>
       </div>
       <div className="flex flex-wrap items-center text-gray-400 dark:text-gray-500 text-[16px] font-normal leading-none">
         {stackList.join(' \\ ')}
@@ -134,7 +139,7 @@ function ExperienceItem({
   locale
 }: ExperienceItemProps): JSX.Element {
   return (
-    <div className="flex flex-col gap-2 flex-shrink-0">
+    <div className="flex flex-col gap-1 flex-shrink-0">
       <div className={clsx('flex w-full', locale === Locale.en ? 'flex-col gap-0' : 'gap-8')}>
         <div className="text-lg font-bold text-primary dark:text-primaryHover">{time}</div>
         <div className="text-xl font-semibold text-gray-600 dark:text-gray-200">{company}</div>
@@ -205,9 +210,10 @@ function HanContent(
           <div className="w-full flex gap-6 items-end flex-wrap">
             <p className="text-6xl font-bold font-family-mont text-gray-600 dark:text-gray-200">
               {'刘真言'}
+              {/* <span className="font-thin align-middle">/WuZhong</span> */}
             </p>
-            <p className="text-xl text-gray-600 dark:text-gray-200 font-normal">
-              {'意向岗位：前端开发实习生'}
+            <p className="text-2xl text-gray-600 dark:text-gray-200 font-normal">
+              {'意向岗位:前端开发工程师'}
             </p>
           </div>
 
@@ -229,7 +235,7 @@ function HanContent(
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
                 <ContactLogo />
               </div>
-              <div>2132102@tongji.edu.cn</div>
+              <div>wuzhong110110@gmail.com</div>
             </a>
 
             <a
@@ -258,7 +264,7 @@ function HanContent(
               <div className="w-7 h-7 text-primary dark:text-primaryHover relative -left-0">
                 <CapLogo />
               </div>
-              <div>{'硕士研究生'}</div>
+              <div>{'浙大本科/同济硕士'}</div>
             </div>
 
             <div className="flex items-center gap-4">
@@ -317,14 +323,14 @@ function HanContent(
               skillType={'前端基础'}
               skillName={'HTML\\CSS\\JavaScript'}
               description={
-                '熟悉HTML5元素以及API;熟悉CSS样式,能使用flex\\grid布局方式;熟悉JS,ES6语法,习惯使用TS。了解浏览器事件循环机制。'
+                '熟悉HTML5;能熟练使用CSS,能使用flex\\grid布局方式;熟悉JS(ES6),习惯使用TS。了解浏览器组成，事件循环机制。有页面设计能力。'
               }
             />
             <SkillItem
               skillType={'前端框架'}
               skillName={'React\\Umi'}
               description={
-                '熟悉React框架,习惯使用函数组件;了解Redux,Hox状态管理库;使用Umi开发过实际项目。'
+                '熟悉React框架,习惯函数组件;了解Redux,Hox状态管理库;使用过Axios请求库;使用过React Router;使用Umi开发过实际项目。'
               }
             />
             {/* <SkillItem
@@ -336,15 +342,13 @@ function HanContent(
               skillType={'前端工程化'}
               skillName={'Vite'}
               description={
-                '了解JS模块化规范.了解webpack构建工具,了解loader, plugin概念。了解并使用过vite。'
+                '了解JS模块化规范.使用过webpack构建工具,了解loader, plugin概念。使用过vite开发项目。'
               }
             />
             <SkillItem
               skillType={'后端技术'}
               skillName={'nodejs\\python'}
-              description={
-                '使用过express，Django搭建后端服务器,了解HTTP请求, REST风格API设计,用户鉴权。'
-              }
+              description={'使用过Django搭建后端服务器,了解HTTP协议,REST风格API设计,JWT用户鉴权。'}
             />
             {/* <SkillItem
               skillType={'设计基础'}
@@ -365,7 +369,7 @@ function HanContent(
 
             <p className="text-xl font-normal text-gray-600 dark:text-gray-200">
               {
-                '刘真言，1999年生于湖北。本科毕业于浙江大学(建筑学)，研究生就读于同济大学(建筑学,2024年春毕业)。学习能力强，参与多个项目的开发，在两家公司担任过前端开发实习生工作。'
+                '刘真言，1999年生于湖北。预计2024年春毕业。参与过多个项目的开发，曾在两家公司任前端开发实习生。学习能力强，有探索精神，热爱通过技术提升效率，善于分析解决问题。曾任四星社团负责人，责任心强。'
               }
             </p>
             {/* <p className="text-xl font-normal text-gray-600 dark:text-gray-200">
@@ -375,22 +379,22 @@ function HanContent(
             </p> */}
           </div>
 
-          <div id="project" className={clsx('flex flex-col gap-3')}>
+          <div id="project" className={clsx('flex flex-col gap-5')}>
             <Title>{'参与项目'}</Title>
 
             <ProjectItem
               time={'3.2023 - *8.2023'}
-              name={'SuitNTie(适途咨询)'}
+              name={'SuitNTie 适途咨询平台'}
               description={'(下列功能已全部实现，简历投递时在进行最后优化。)'}
               stackList={['Umi', 'AntD', 'tailwindcss', 'TypeScript']}
               introduction={
-                '本项目是面向国际高中的留学咨询平台。提供院校详实信息展示；职业兴趣测试；申请进度管理等功能。\n我负责该项目的前端实现，采用了Umi+AntD来搭建前端项目。项目中实现了基于GPT-4和院校数据库的机器人对话功能；基于AntD表格的分页筛选展示功能。采用umi内置的Hox来进行状态管理。'
+                '本项目是面向国际高中的留学咨询平台，B端项目。提供院校详实信息展示；职业兴趣测试；申请进度管理等功能。\n我负责该项目的前端实现，采用了Umi+AntD来搭建前端项目。采用Hox来进行状态管理，基于AntD表格实现筛选展示功能，采用echarts绘制数据图表。项目中实现了基于GPT-4和院校数据库的机器人对话功能。'
               }
             />
 
             <ProjectItem
               time={'11.2022 - *4.2023'}
-              name={'AutoReview'}
+              name={'AutoReview 建筑规范自动审核平台'}
               // description={t('projects.item1.description')}
               stackList={[
                 'React',
@@ -409,7 +413,7 @@ function HanContent(
 
             <ProjectItem
               time={'3.2023 - 4.2023'}
-              name={'ChatGlider'}
+              name={'ChatGlider 划词翻译'}
               // description={t('projects.item2.description')}
               stackList={['Electron', 'Vite', 'React', 'ChatGPT-API', 'TypeScript']}
               introduction={
@@ -436,7 +440,7 @@ function HanContent(
                 time="6.2021 - 9.2021"
                 company={'群核科技(酷家乐)'}
                 work={
-                  '担任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。完成了两篇文章的算法复现，帮助部门总结了模型训练经验。此过程中我学习了使用pytorch进行深度学习训练，以及git\\linux等工作技能。'
+                  '任科研算法实习生，主要负责手绘草图三维重建相关文献阅读和复现。完成两篇文章的复现，学习了pytorch深度学习库，以及git\\linux等技能。'
                 }
               />
               <ExperienceItem
