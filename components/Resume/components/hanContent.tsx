@@ -198,7 +198,7 @@ function HanContent(
         <div id="left-top" className="flex w-[32%] items-center justify-start">
           <div className="h-full rounded-full relative overflow-hidden" style={{ aspectRatio: 1 }}>
             <Image
-              src={'/img/wuzhong_02.jpg'}
+              src={'/img/liuzhenyan.jpg'}
               fill
               className="object-cover scale-150 origin-top translate-x-1"
               alt="avator"
