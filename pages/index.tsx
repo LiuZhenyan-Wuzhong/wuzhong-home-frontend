@@ -121,7 +121,7 @@ export default function ProfilePage() {
                   'order-1 lg:order-2',
                   'transition-all ease-in-out duration-300 overflow-hidden'
                 )}>
-                <Image src="/img/wuzhong_03.jpeg" fill alt="" className="object-cover" />
+                <Image src="/img/queen.jpg" fill alt="" className="object-cover object-left" />
               </div>
             </div>
             <hr className="w-64 mx-auto dark:border-gray-700" />
